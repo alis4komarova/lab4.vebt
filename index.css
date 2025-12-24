@@ -1,12 +1,11 @@
 body {
-    background-image: url("./back.jpg");
     font-family: Arial;
+    background-color: #e9a9a9;
 }
 h1{
-    color: #fff;
+    color: ##FB4645;
     margin-left: 740px;
     margin-right: 770px;
-    background-color: #FB4645;
 }
 form {
     background-color: #fff;
@@ -47,4 +46,11 @@ input[type="submit"] {
     font-size: 16px;
     color: white;
     cursor: pointer;
+}
+img{
+    max-height: 70px;
+    margin-left: 870px;
+}
+textarea{
+    max-width: 600px;
 }

@@ -1,36 +1,44 @@
-<!DOCTYPE html>
-<html lang = "ru">
-<head>
-    <title>Моя страница</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
-<body>
-    <h1>Формы обратной связи</h1>
-    <form name="feedback" method="POST" action="https://httpbin.org/post">
+  <?php	
+	include 'header.html';
+  ?>
+  <?php 
+    if(isset($_GET['name'])){
+        $name=$_GET['name'];
+        $email=$_GET['email'];
+        $from=$_GET['from'];
+    } else {
+    $name = '';
+    $email = '';
+    $from = '';
+}
+?>
+<main>
+    <h1>Форма обратной связи</h1>
+    <form name="feedback" method="POST" action="home.php">
         <p>
             ФИО:<br>
-            <input type="text" placeholder="ФИО"><br>
+            <input type="text" name="name" placeholder="ФИО" value="<?php echo $name; ?>"><br>
             email:<br>
-            <input type="email" placeholder="email"><br>
+            <input type="email" name="email" value="<?php echo $email; ?>" placeholder="yourEmail@mail.ru"><br>
             Откуда узнали:<br>
-            <input type="radio" name="from" value="fr">
+            <input type="radio" name="from" value="fr" <?php echo ($from == 'fr') ? 'checked' : ''; ?>>
             От друга <br>
-            <input type="radio" name="from" value="in">
+            <input type="radio" name="from" value="in" <?php echo ($from == 'in') ? 'checked' : ''; ?>>
             Из интернета <br>
-            <select size="1">
+            <select size="1" name="category">
                 <option selected disabled>
                     Тип обращения
                 </option>
-                <option value="1">
+                <option value="complaint">
                     Жалоба
                 </option>
-                <option value="2">
+                <option value="propose">
                     Предложение
                 </option>
             </select><br>
-            <textarea rows="5" cols="40" name="text">
+            <textarea name="message" rows="5" cols="40" name="text">
             </textarea><br>
-            <input type="file" name="f"><br>
+            <input type="file"  name="attachment"><br>
             <input type="checkbox" name="agree" value="yes">
             Даю согласие на обработку персональных данных
         </p>
@@ -38,19 +46,5 @@
             <input type="submit" value="Отправить">
         </p>
     </form>
-    <form name ="login" method="POST" action="https://httpbin.org/post">
-        <p>
-            Логин:<br>
-            <input type="text" name="login" placeholder="логин">
-        </p>
-        <p>
-            Пароль:<br>
-            <input type="password" name="password" placeholder="пароль">
-        </p>
-        <input type="checkbox" name="agree" value="yes">
-        Запомнить меня
-        <p>
-            <input type="submit" value="Войти">
-        </p>
-    </form>
 </body>
+</html>
