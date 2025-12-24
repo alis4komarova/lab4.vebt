@@ -1,0 +1,50 @@
+body {
+    background-image: url("./back.jpg");
+    font-family: Arial;
+}
+h1{
+    color: #fff;
+    margin-left: 740px;
+    margin-right: 770px;
+    background-color: #FB4645;
+}
+form {
+    background-color: #fff;
+    border: 2px solid #FB4645;
+    padding: 20px;
+    margin: 20px auto;
+    width: 500px;
+}
+textarea {
+    margin: 8px;
+    padding: 0px;
+    border: 2px solid #e9a9a9;
+    width:97%;
+}
+select{
+    margin: 8px;
+    padding: 8px;
+    border: 2px solid #e9a9a9;
+    cursor: pointer;
+    font-size: 16px;
+}
+input{
+    margin: 8px;
+    padding: 8px;
+    border: 2px solid #e9a9a9;
+}
+input[type="file"]{
+    cursor: pointer;
+}
+input[type="checkbox"]{
+    cursor: pointer;
+}
+input[type="radio"]{
+    cursor: pointer;
+}
+input[type="submit"] {
+    background-color: #FB4645;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
