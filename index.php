@@ -36,9 +36,9 @@
                     Предложение
                 </option>
             </select><br>
-            <textarea name="message" rows="5" cols="40" name="text">
+            <textarea name="message" rows="5" cols="40">
             </textarea><br>
-            <input type="file"  name="attachment"><br>
+            <input type="file"  name="attachment" enctype="multipart/form-data" ><br>
             <input type="checkbox" name="agree" value="yes">
             Даю согласие на обработку персональных данных
         </p>
