@@ -3,7 +3,7 @@
   ?>
 <main>
     <?php
-        if(isset($_POST['name'])){
+        if(isset($_POST['name']) && trim($_POST['name']) != ''){
             echo '<h2>Ответ на ваше обращение</h2>';
             echo '<p> Здравствуйте, '.$_POST['name'].'</p>'; //выводим ФИО
 
